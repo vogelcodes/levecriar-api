@@ -3,7 +3,7 @@
   "host": "localhost",
   "port": 5432,
   "username": "postgres",
-  "password": "teteu2018",
+  "password": "password",
   "database": "levecriar",
   "migrations": [
     "./src/database/migrations/*.ts"
