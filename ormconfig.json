@@ -5,6 +5,9 @@
   "username": "postgres",
   "password": "password",
   "database": "levecriar",
+  "entities": [
+    "./src/models/*.ts"
+  ],
   "migrations": [
     "./src/database/migrations/*.ts"
   ],
