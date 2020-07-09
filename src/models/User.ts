@@ -7,7 +7,7 @@ class User {
 
   email: string;
 
-  constructor(name: string, email: string) {
+  constructor({ name, email }: Omit<User, 'id'>) {
     this.id = uuid();
     this.email = email;
     this.name = name;
