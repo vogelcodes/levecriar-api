@@ -1,9 +1,9 @@
 {
   "type": "postgres",
-  "host": "localhost",
+  "host": "192.168.1.193",
   "port": 5432,
-  "username": "postgres",
-  "password": "password",
+  "username": "levecriar",
+  "password": "levecriar",
   "database": "levecriar",
   "entities": [
     "./src/models/*.ts"
