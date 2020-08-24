@@ -25,5 +25,16 @@ usersRouter.post('/', async (request, response) => {
     return response.status(400).json({ error: err.message });
   }
 });
+usersRouter.delete('/:id', async (request, response) => {
+  try {
+    const { id } = request.params;
+    const usersRepository = getCustomRepository(UsersRepository);
+    const deletedUser = usersRepository.delete({ id });
+
+    return response.json(deletedUser);
+  } catch (err) {
+    return response.status(400).json({ error: err.message });
+  }
+});
 
 export default usersRouter;
