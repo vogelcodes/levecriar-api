@@ -9,7 +9,7 @@ const trousseaus = [];
 trousseauRouter.post('/', (request, response) => {
   const { name, dpp, location, userId } = request.body;
   const parsedDpp = parseISO(dpp);
-  const trousseau = new Trousseau(name, parsedDpp, location, userId);
+  const trousseau = { name, dpp, parsedDpp, location, userId };
 
   trousseaus.push(trousseau);
 

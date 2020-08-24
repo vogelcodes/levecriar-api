@@ -1,22 +1,20 @@
-import { uuid } from 'uuidv4';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
+@Entity('items')
 class Item {
+  @PrimaryGeneratedColumn('uuid')
   id: string;
 
+  @Column()
   name: string;
 
+  @Column()
   category: string;
 
+  @Column()
   qty: number;
 
+  @Column()
   trsId: string;
-
-  constructor(name: string, category: string, qty: number, trsId: string) {
-    this.id = uuid();
-    this.name = name;
-    this.category = category;
-    this.qty = qty;
-    this.trsId = trsId;
-  }
 }
 export default Item;
